@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Mosaic Berbasis Aljabar Linier</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Photo Mosaic Berbasis Aljabar Linier</h1>
+  <p class="subtitle">
+    Konstruksi citra mosaic menggunakan representasi vektor warna dan transformasi linier
+  </p>
+
+  <div class="controls">
+    <label>Target Image</label>
+    <input type="file" id="targetInput" accept="image/*">
+
+    <label>Dataset Images (Files)</label>
+    <input type="file" id="datasetFilesInput" multiple accept="image/*">
+
+    <label>Dataset Images (Folder)</label>
+    <input type="file" id="datasetFolderInput" webkitdirectory multiple accept="image/*">
+
+    <button id="generateBtn">Generate Mosaic</button>
+
+    <div id="status" class="status idle">
+      Ready.
+    </div>
+  </div>
+
+  <div class="preview">
+    <div>
+      <h3>Target Image</h3>
+      <img id="targetPreview">
+    </div>
+    <div>
+      <h3>Mosaic Result</h3>
+      <canvas id="canvas"></canvas>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
